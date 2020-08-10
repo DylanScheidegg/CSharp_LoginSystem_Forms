@@ -18,7 +18,7 @@ namespace LoginSystem
         private void btnLogin_Click(object sender, EventArgs e)
         {
             // Opens connection to the server
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\dylan\Documents\dbLogin.mdf;Integrated Security=True;Connect Timeout=30");
+            SqlConnection con = new SqlConnection(@"Server Source");
             
             // Checks if the username and password match in the server
             SqlDataAdapter sqa = new SqlDataAdapter("Select count(*) From tblLogin where Username ='" + tbUsername.Text + "' and Password = '" + tbPassword.Text + "'", con);
